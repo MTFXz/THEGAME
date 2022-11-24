@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    padding: 0;;
+}
+:root
+{
+    --corPrimaria : rgba(173, 177, 199, 0.486);
+    --corTexto:rgb(255, 255, 255);
+    --corSecundaria : rgb(0, 0, 0);
+    --corFundo: rgba(255, 255, 255, 0.445);
+}
+.dark:root {
+    --corPrimaria : rgb(136, 136, 136);
+    --corTexto: white;
+    --corSecundaria : rgb(0, 0, 0);
+    --corFundo: rgb(172, 171, 171);
+}
+body,html{
+    overflow-x: hidden;
+    
+}
+body{
+    display: flex;
+    margin: 0;;
+    flex-direction: column;
+    animation: none;
+}
+
+
+/*-----------------CABEÇALHO---------------------*/
+header{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-around;
+    padding:20px ;
+    width: 100%;
+    z-index: 2;
+    background-image: url('f4.jpg');
+    background-size: cover;
+}
+.boxlogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.boxlogo h1 {
+    text-align: left;
+    font-size: 2em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-weight: bold;
+margin-left: 30px;
+color: var(--corTexto);
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    background: var(--corPrimaria);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  
+    
+}
+
+nav ul{
+    list-style: none;
+    align-items: center;
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+}
+li a {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--corTexto);
+    font-size: 1.1em;
+}
+nav ul li a:hover 
+{ 
+    color: var(--corSecundaria);
+}
+
+
+/*-----------------------FIM DO CABEÇALHO-------------------------*/
+/*----------------------------RODAPÉ------------------------------*/
+
+ footer{
+   z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px var(--corPrimaria) solid;
+    background: var(--corSecundaria);
+    color: var(--corTexto);
+   justify-content: center;
+   text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+
+footer h3 
+{
+    font-size: 15px;
+}
+
+footer h3 a {
+    text-decoration: none;
+    color: var(--corTexto);
+}
+
+footer h3 a:hover {
+
+    text-shadow: 1px 1px 5px var(--corTexto);
+}
+footer h4
+{
+    display: inline-block;
+}
+.footerdispo{
+    display: flex;
+   flex-direction: row;
+    justify-content:start;
+
+}
+footer ul{
+    list-style: none;
+    align-items: left;
+
+}
+footer ul li {
+    display: inline-block;
+    margin-left: 0px;
+    font-size: 10px;
+}
+footer li a {
+    text-decoration: none;
+    color: var(--corTexto);
+    font-size: 10px;
+}
+footer ul li a:hover{ 
+    color: var(--corPrimaria);
+}
+    /*-------------------FIM DO RODAPÉ-----------------------------*/
+
+    main{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 800px;
+
+    }
+    .content
+    {  background-color: unset;
+        opacity: 100%;
+        height: 100%;
+        width: 70%;
+        display: flex;
+        justify-content: left;
+        position: relative;
+        background-image: url('back.jpg');
+        background-size: cover; 
+    }
+
+    #contentp {
+        position: absolute;
+        top:2px;
+        left: 2px;
+        height: 97%;
+        width: 25%;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100%                100%, 100% 100%, 25%                100%, 0% 75%, 0% 0%);
+    }
+    .info {
+        position: absolute;         
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background-color: unset;
+        filter: blur(px);
+    }
+    .box {
+      position: relative;
+      background-color: lightgrey;
+      width: auto;
+      min-width:500px;
+      height: 120px;
+      -webkit-box-ordinal-group: 1; /* iOS 6-, Safari, Opera*/
+      -moz-box-ordinal-group: 1; /* Firefox*/
+      -ms-flex-order: 1; /* IE 10 */
+      border: 2px solid #0d0d0d;
+      padding: 25px;
+      margin: 18px;
+      align-items: center;
+      margin-right: 50px;
+          }
+
+    .registros{
+       color: var(--corTexto);   
+
+    }
+    .registros h1{
+        position: relative;
+        margin-left: 130px;
+        bottom: 10px;
+        color: #6f6d6d;
+        font-weight: normal;
+        font-size: 0.9em;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+    }
+    .registros h4{ 
+        position: relative;
+        font-weight: bolder;
+        color: black;  
+        font-size: 1.1em;
+        align-items: baseline;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-left: 130px;
+        bottom: 10px;
+        text-align: center;
+    }
+
+   aside{
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #363434;
+    overflow: hidden;
+   }
+   aside h1{
+    font-family: Georgia, serif;
+    font-weight: bolder;
+    rotate:-90deg;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+   }
+   aside img{
+    rotate: -90deg;
+    height: 100%;
+    filter: blur(8px);
+     
+    
+   }
+
+   @media screen and (max-width:883px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    :root
+    {
+        --corPrimaria : rgba(255, 255, 255, 1);
+        --corTexto:rgb(255, 255, 255);
+        --corSecundaria : rgb(255, 255, 255);
+    }
+    .dark:root {
+        --corPrimaria : rgb(255, 255, 255);
+        --corTexto: white;
+        --corSecundaria : rgb(255, 255, 255);
+    }
+    html,body{
+        overflow-x: hidden;
+    }
+        /*-----------------CABEÇALHO---------------------*/
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--corSecundaria);
+        padding:10px ;
+        width: 100%;
+        position: relative;
+        background-image: url('f4.jpg');
+        background-size: cover;
+        
+    }
+    
+    .boxlogo{ 
+      display: flex;
+      flex-direction:row;
+      margin: 0;
+      padding: 0;
+      aligntext:center;
+      padding-right: 10px;
+        
+    }
+    .boxlogo h1 {
+        font-size: 0.5em;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+        font-weight: normal;
+    color: var(--corTexto);
+    }
+
+    nav{
+        background: var(--corPrimaria);
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        font-size: 0.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        
+    }
+    nav ul{
+        list-style: none;
+    }
+    nav ul li {
+        display: inline-block;
+        margin-left: 0px;
+    }
+    li a {
+        text-decoration: none;
+        color: var(--corTexto);
+    font-size: 1.1em;
+    }
+    nav ul li a:hover 
+    { 
+        color: var(--corSecundaria);
+    }
+   /*----------------- FIM DO  CABEÇALHO---------------------*/
+
+       /*-----------------RODAPÉ---------------------*/
+    footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-top: solid var(--corPrimaria) 3px;
+        position: relative;
+        background: var(--corSecundaria);
+        color: var(--corTexto);
+       justify-content: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+    }
+    footer h3{
+    text-align: center;
+    font-size: 0.5em;
+    margin-bottom: 30px;
+    }
+    
+    footer h3 a {
+        text-decoration: none;
+        color: var(--corTexto)
+        
+    }
+    
+    footer h3 a:hover {
+    
+        text-shadow: 0px 0px 3px var(--corTexto);
+    }
+       /*-----------------FIM DO RODAPE---------------------*/
+       
+       .content
+       {  background-color: unset;
+           opacity: 100%;
+           height: 100%;
+           width: 70%;
+           display: flex;
+           justify-content: left;
+           position: absolute;  
+       }
+       content img{
+       height: 100%;
+       filter: blur(5px);
+       }
+
+       #contentp {
+           position: absolute;
+           top:2px;
+           left: 2px;
+           height: 97%;
+           width: 25%;
+           -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100%                100%, 100% 100%, 25%                100%, 0% 75%, 0% 0%);
+       }
+    .info {
+        position: absolute;
+        top:30%;
+        width: 90%;
+        height: 50%;
+        padding: 20px;
+       background-color: var(--corSecundaria);
+        border: 1px solid var(--corPrimaria);
+        border-radius: 10px;
+    }
+
+    .box {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      background-color: lightgrey;
+      width: 100px;
+      border: 5px solid red;
+      padding: 25px;
+      margin: 18px;
+          }
+
+    .registros{
+        position: absolute;
+        top:30%;
+       color: var(--corTexto);
+       padding: 10px;
+
+    }
+    .registros h1{
+        font-weight: 100;
+        font-size: 1em;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-top: 10px;
+    }
+    .registros h2{
+font-size: 1em;
+    }
+
+   }    
+   
+
+
+   
+   @media screen and (min-width:884px)and (max-width:1440px) {
+
+   *{
+    margin: 0;
+    padding: 0;;
+}
+:root
+{
+    --corPrimaria : rgba(255, 255, 255, 1);
+    --corTexto:rgb(255, 255, 255);
+    --corSecundaria : rgb(0, 0, 0);
+}
+.dark:root {
+    --corPrimaria : rgb(255, 255, 255);
+    --corTexto: white;
+    --corSecundaria : rgb(255, 255, 255);
+}
+html,body{
+    overflow-x: hidden;
+}
+/*-----------------CABEÇALHO---------------------*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--corSecundaria);
+    padding:30px ;
+    width: 100%;
+    background-image: url('f4.jpg');
+    background-size: cover;
+    
+}
+}
+
+.boxlogo{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    padding-right: 10px;
+    
+}
+.boxlogo h1 {
+    font-size: 6em;
+    font-family: "Times New Roman", Times, serif ;
+    font-weight: 1000;
+    font-style: italic;
+  -webkit-text-stroke: 2px #474747;
+  
+color: var(--corTexto);
+}
+nav{
+    background: var(--corPrimaria);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    background-image: url('preview.jpg');
+    background-size: cover;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+}
+li a {
+    text-decoration: overline red;
+    color: var(--corTexto);
+font-size: 1em;
+}
+nav ul li a:hover 
+{ 
+    color: var(--corSecundaria);
+}
+
+   /*----------------- FIM DO CABEÇALHO---------------------*/
+
+
+
+   /*-----------------FOOTER--------------------*/
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    border-top: solid var(--corPrimaria) 3px;
+    position: relative;
+    background: var(--corSecundaria);
+    color: var(--corTexto);
+   justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+footer h3{
+text-align: center;
+font-size: 1em;
+margin-bottom: 30px;
+}
+
+footer h3 a {
+    text-decoration: none;
+    color: var(--corTexto)
+    
+}
+
+footer h3 a:hover {
+
+    text-shadow: 0px 0px 3px var(--corTexto);
+}
+
+ /*----------------- FIM DO FOOTER--------------------*/
